@@ -139,7 +139,8 @@ class __$$EditionAyahsModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(disallowUnrecognizedKeys: false)
+@JsonSerializable(
+    disallowUnrecognizedKeys: false, fieldRename: FieldRename.snake)
 class _$EditionAyahsModelImpl implements _EditionAyahsModel {
   const _$EditionAyahsModelImpl(
       {required this.number,
@@ -240,7 +241,7 @@ mixin _$AyahModel {
   int get numberInSurah => throw _privateConstructorUsedError;
   String get text => throw _privateConstructorUsedError;
   @JsonKey(name: "audio")
-  String get audioUrl => throw _privateConstructorUsedError;
+  String? get audioUrl => throw _privateConstructorUsedError;
   String? get translation => throw _privateConstructorUsedError;
 
   /// Serializes this AyahModel to a JSON map.
@@ -261,7 +262,7 @@ abstract class $AyahModelCopyWith<$Res> {
   $Res call(
       {int numberInSurah,
       String text,
-      @JsonKey(name: "audio") String audioUrl,
+      @JsonKey(name: "audio") String? audioUrl,
       String? translation});
 }
 
@@ -282,7 +283,7 @@ class _$AyahModelCopyWithImpl<$Res, $Val extends AyahModel>
   $Res call({
     Object? numberInSurah = null,
     Object? text = null,
-    Object? audioUrl = null,
+    Object? audioUrl = freezed,
     Object? translation = freezed,
   }) {
     return _then(_value.copyWith(
@@ -294,10 +295,10 @@ class _$AyahModelCopyWithImpl<$Res, $Val extends AyahModel>
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
-      audioUrl: null == audioUrl
+      audioUrl: freezed == audioUrl
           ? _value.audioUrl
           : audioUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       translation: freezed == translation
           ? _value.translation
           : translation // ignore: cast_nullable_to_non_nullable
@@ -317,7 +318,7 @@ abstract class _$$AyahModelImplCopyWith<$Res>
   $Res call(
       {int numberInSurah,
       String text,
-      @JsonKey(name: "audio") String audioUrl,
+      @JsonKey(name: "audio") String? audioUrl,
       String? translation});
 }
 
@@ -336,7 +337,7 @@ class __$$AyahModelImplCopyWithImpl<$Res>
   $Res call({
     Object? numberInSurah = null,
     Object? text = null,
-    Object? audioUrl = null,
+    Object? audioUrl = freezed,
     Object? translation = freezed,
   }) {
     return _then(_$AyahModelImpl(
@@ -348,10 +349,10 @@ class __$$AyahModelImplCopyWithImpl<$Res>
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
-      audioUrl: null == audioUrl
+      audioUrl: freezed == audioUrl
           ? _value.audioUrl
           : audioUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       translation: freezed == translation
           ? _value.translation
           : translation // ignore: cast_nullable_to_non_nullable
@@ -368,7 +369,7 @@ class _$AyahModelImpl implements _AyahModel {
   const _$AyahModelImpl(
       {required this.numberInSurah,
       required this.text,
-      @JsonKey(name: "audio") required this.audioUrl,
+      @JsonKey(name: "audio") this.audioUrl,
       this.translation = null});
 
   factory _$AyahModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -380,7 +381,7 @@ class _$AyahModelImpl implements _AyahModel {
   final String text;
   @override
   @JsonKey(name: "audio")
-  final String audioUrl;
+  final String? audioUrl;
   @override
   @JsonKey()
   final String? translation;
@@ -429,7 +430,7 @@ abstract class _AyahModel implements AyahModel {
   const factory _AyahModel(
       {required final int numberInSurah,
       required final String text,
-      @JsonKey(name: "audio") required final String audioUrl,
+      @JsonKey(name: "audio") final String? audioUrl,
       final String? translation}) = _$AyahModelImpl;
 
   factory _AyahModel.fromJson(Map<String, dynamic> json) =
@@ -441,7 +442,7 @@ abstract class _AyahModel implements AyahModel {
   String get text;
   @override
   @JsonKey(name: "audio")
-  String get audioUrl;
+  String? get audioUrl;
   @override
   String? get translation;
 

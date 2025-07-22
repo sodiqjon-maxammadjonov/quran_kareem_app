@@ -1,7 +1,8 @@
+// lib/data/datasources/remote_datasource.dart
+
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:quran_kareem/core/constants/api_constants.dart';
-
 import '../../core/network/network_exeptions.dart';
 import '../models/ayah/ayah_model.dart';
 
@@ -13,7 +14,7 @@ final dioProvider = Provider<Dio>((ref) {
       receiveTimeout: const Duration(seconds: 15),
     ),
   );
-  dio.interceptors.add(LogInterceptor(responseBody: true, requestBody: true)); // Xatolikni topish uchun logger
+  dio.interceptors.add(LogInterceptor(responseBody: true, requestBody: true));
   return dio;
 });
 
@@ -21,8 +22,6 @@ abstract class IRemoteDataSource {
   Future<List<AyahModel>> getAyahs(int surahNumber);
 }
 
-
-// ENG MUHIM O'ZGARISH - SODDA VA ISHONCHLI MANTIQ
 class RemoteDataSourceImpl implements IRemoteDataSource {
   final Dio _dio;
   RemoteDataSourceImpl(this._dio);
@@ -30,69 +29,64 @@ class RemoteDataSourceImpl implements IRemoteDataSource {
   @override
   Future<List<AyahModel>> getAyahs(int surahNumber) async {
     try {
+      print("✅ [1] RemoteDataSource: getAyahs chaqirildi (sura: $surahNumber).");
+
       final response = await _dio.get(
         "${ApiConstants.surahEndpoint}/$surahNumber/editions/${ApiConstants.defaultAudioEdition},${ApiConstants.defaultTranslationEdition}",
       );
 
-      // 1-QADAM: API javobi muvaffaqiyatli ekanligini tekshiramiz.
-      if (response.statusCode == 200 && response.data is Map<String, dynamic>) {
-        final Map<String, dynamic> responseBody = response.data;
+      print("✅ [2] API'dan javob keldi, statusCode: ${response.statusCode}.");
 
-        // 2-QADAM: Javobning ichki tuzilishi to'g'ri ekanligini tekshiramiz.
-        // `data` kaliti mavjudmi va uning qiymati kamida 2 elementli ro'yxatmi?
-        if (responseBody.containsKey('data') &&
-            responseBody['data'] is List &&
-            (responseBody['data'] as List).length >= 2) {
+      if (response.statusCode == 200 && response.data['data'] is List) {
+        final List<dynamic> editionsList = response.data['data'];
 
-          final List<dynamic> editionsList = responseBody['data'];
-
-          // 3-QADAM: JSON ma'lumotlarni o'zimizning modellarga aylantiramiz.
-          // Hech qanday taxminlarsiz, to'g'ridan-to'g'ri.
-          final EditionAyahsModel audioEdition = EditionAyahsModel.fromJson(editionsList[0]);
-          final EditionAyahsModel translationEdition = EditionAyahsModel.fromJson(editionsList[1]);
-
-          // Oyatlarni birlashtirish jarayoni
-          List<AyahModel> combinedAyahs = [];
-
-          // Suralardagi oyatlar soni bir-biriga tengligiga ishonch hosil qilamiz.
-          if (audioEdition.ayahs.length != translationEdition.ayahs.length) {
-            throw ServerException(message: "Tarjima va qiroat oyatlari soni mos kelmadi!");
-          }
-
-          // 4-QADAM: Modellardagi `ayahs` ro'yxatlarini birlashtiramiz.
-          for (int i = 0; i < audioEdition.ayahs.length; i++) {
-            final audioAyah = audioEdition.ayahs[i];
-            final translationAyah = translationEdition.ayahs[i];
-
-            combinedAyahs.add(
-              // `audioAyah`ning nusxasini olib, unga tarjimani qo'shamiz
-              audioAyah.copyWith(
-                translation: translationAyah.text,
-              ),
-            );
-          }
-          return combinedAyahs;
-
-        } else {
-          // Agar `data` kaliti yoki uning tuzilishi noto'g'ri bo'lsa
-          throw ServerException(message: "API javobining tuzilishi kutilganidek emas.");
+        if (editionsList.length < 2) {
+          throw ServerException(message: "API kutilgan 2 ta nashrni qaytarmadi.");
         }
-      } else {
-        // Agar status kodi 200 bo'lmasa
-        throw ServerException(statusCode: response.statusCode);
+
+        print("✅ [3] Parsing jarayoni boshlanmoqda...");
+
+        final EditionAyahsModel audioEdition = EditionAyahsModel.fromJson(editionsList[0]);
+        print("✅ [4] Audio nashri muvaffaqiyatli o'girildi.");
+
+        final EditionAyahsModel translationEdition = EditionAyahsModel.fromJson(editionsList[1]);
+        print("✅ [5] Tarjima nashri muvaffaqiyatli o'girildi.");
+
+        if (audioEdition.ayahs.length != translationEdition.ayahs.length) {
+          throw ServerException(message: "Oyatlar soni mos kelmadi!");
+        }
+
+        List<AyahModel> combinedAyahs = [];
+        for (int i = 0; i < audioEdition.ayahs.length; i++) {
+          final audioAyahModel = audioEdition.ayahs[i];
+          final translationText = translationEdition.ayahs[i].text;
+          combinedAyahs.add(audioAyahModel.copyWith(translation: translationText));
+        }
+
+        print("✅ [6] Oyatlar muvaffaqiyatli birlashtirildi. Jarayon tugadi.");
+        return combinedAyahs;
       }
+
+      throw ServerException(statusCode: response.statusCode);
+
     } on DioException catch (e) {
+      print("❌ [XATO-DIO] DioException yuz berdi: ${e.message}");
+      print("    - Turi: ${e.type}");
+      print("    - Javob: ${e.response?.data}");
+
       if (e.type == DioExceptionType.connectionTimeout || e.type == DioExceptionType.receiveTimeout) {
         throw TimeoutException();
-      } else if (e.type == DioExceptionType.unknown && e.message != null && e.message!.contains('SocketException')) {
-        throw NoInternetException();
       } else if (e.response != null) {
-        throw ServerException(statusCode: e.response?.statusCode, message: "Server bilan bog'lanishda xatolik");
+        throw ServerException(statusCode: e.response?.statusCode, message: "Server bilan xatolik");
       } else {
-        throw UnknownException();
+        throw NoInternetException();
       }
-    } catch (e) {
-      throw UnknownException(message: "Ma'lumotlarni qayta ishlashda xatolik yuz berdi: $e");
+    } catch (e, stackTrace) {
+      print("❌ [XATO-UMUMIY] Kutilmagan xatolik yuz berdi!");
+      print("    - XATO TURI: ${e.runtimeType}");
+      print("    - XATO MATNI: $e");
+      print("    - XATO IZLARI (STACK TRACE): \n$stackTrace");
+      throw UnknownException(message: "Ma'lumotlarni qayta ishlashda kutilmagan xatolik: $e");
     }
   }
 }

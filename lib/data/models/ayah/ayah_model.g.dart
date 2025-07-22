@@ -11,7 +11,7 @@ _$EditionAyahsModelImpl _$$EditionAyahsModelImplFromJson(
     _$EditionAyahsModelImpl(
       number: (json['number'] as num).toInt(),
       name: json['name'] as String,
-      englishName: json['englishName'] as String,
+      englishName: json['english_name'] as String,
       ayahs: (json['ayahs'] as List<dynamic>)
           .map((e) => AyahModel.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -22,7 +22,7 @@ Map<String, dynamic> _$$EditionAyahsModelImplToJson(
     <String, dynamic>{
       'number': instance.number,
       'name': instance.name,
-      'englishName': instance.englishName,
+      'english_name': instance.englishName,
       'ayahs': instance.ayahs,
     };
 
@@ -30,7 +30,7 @@ _$AyahModelImpl _$$AyahModelImplFromJson(Map<String, dynamic> json) =>
     _$AyahModelImpl(
       numberInSurah: (json['numberInSurah'] as num).toInt(),
       text: json['text'] as String,
-      audioUrl: json['audio'] as String,
+      audioUrl: json['audio'] as String?,
       translation: json['translation'] as String? ?? null,
     );
 

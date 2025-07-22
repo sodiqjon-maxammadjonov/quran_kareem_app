@@ -16,18 +16,14 @@ class AyahsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // Sura raqami orqali '.family' provayderini kuzatish
     final ayahsAsyncValue = ref.watch(ayahsProvider(surah.number));
     final theme = Theme.of(context);
 
     return Scaffold(
-      // Body'ni AppBar orqasiga o'tkazib yuborish fon uchun kerak
       extendBodyBehindAppBar: true,
 
-      // Butun ekran endi `Stack` bilan o'ralgan
       body: Stack(
         children: [
-          // 1-qatlam: Orqa fon gradienti
           Container(
             width: double.infinity,
             height: double.infinity,

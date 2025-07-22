@@ -6,7 +6,7 @@ part 'ayah_model.g.dart';
 
 @freezed
 class EditionAyahsModel with _$EditionAyahsModel {
-  @JsonSerializable(disallowUnrecognizedKeys: false)
+  @JsonSerializable(disallowUnrecognizedKeys: false, fieldRename: FieldRename.snake)
   const factory EditionAyahsModel({
     required int number,
     required String name,
@@ -23,8 +23,10 @@ class AyahModel with _$AyahModel implements AyahEntity {
   const factory AyahModel({
     required int numberInSurah,
     required String text,
-    @JsonKey(name: "audio") required String audioUrl,
+    @JsonKey(name: "audio") String? audioUrl,
+
     @Default(null) String? translation,
+
   }) = _AyahModel;
 
   factory AyahModel.fromJson(Map<String, dynamic> json) =>
