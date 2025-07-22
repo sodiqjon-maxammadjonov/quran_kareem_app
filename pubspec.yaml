@@ -1,0 +1,81 @@
+name: quran_kareem
+description: A modern and feature-rich Quran Kareem application built with Flutter.
+publish_to: 'none' # pub.dev ga joylashning oldini olish uchun
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0' # Zamonaviy Dart 3 xususiyatlaridan foydalanish uchun
+
+# --- Ilova qaramliklari ---
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State Management (Holatni boshqarish)
+  flutter_riverpod: ^2.5.1
+
+  # Networking (API bilan ishlash)
+  dio: ^5.4.3+1
+
+  # Code Generation & Immutability (O'zgarmas modellar va kod generatsiyasi)
+  freezed_annotation: ^2.4.1
+
+  # JSON Parsing
+  json_annotation: ^4.9.0
+
+  # Local Storage (Lokal saqlash)
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.2.3
+
+  # Audio Player (Ovozlarni ijro etish)
+  just_audio: ^0.9.38
+
+  # UI/UX & Animations
+  flutter_staggered_animations: ^1.1.1
+  lottie: ^3.1.2
+  flutter_svg: ^2.0.10+1
+  shimmer: ^3.0.0
+  cached_network_image: ^3.3.1
+  google_fonts: ^6.2.1
+
+  # Utilities
+  connectivity_plus: ^6.0.3
+  permission_handler: ^11.3.1
+  intl: ^0.20.0
+
+# --- Faqat ishlab chiqish uchun qaramliklar ---
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.9
+  freezed: ^2.5.2
+  json_serializable: ^6.8.0
+  hive_generator: ^2.0.1
+  flutter_lints: ^4.0.0
+
+# --- Flutter uchun maxsus sozlamalar ---
+flutter:
+  uses-material-design: true
+
+  # Lokalizatsiya sozlamalari
+  generate: true
+
+  # Resurslar (Assets)
+  assets:
+    - assets/images/
+    - assets/json/
+    - assets/fonts/
+    - assets/animations/
+
+  # Shriftlar
+  fonts:
+    - family: Amiri
+      fonts:
+        - asset: assets/fonts/Amiri-Regular.ttf
+        - asset: assets/fonts/Amiri-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Amiri-Italic.ttf
+          style: italic

@@ -1,0 +1,31 @@
+{
+  "surahs": [
+    {
+      "number": 1,
+      "name": "ٱلْفَاتِحَة",
+      "englishName": "Al-Fatihah",
+      "uzbekName": "Фотиҳа",
+      "ayahCount": 7,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 2,
+      "name": "ٱلْبَقَرَة",
+      "englishName": "Al-Baqarah",
+      "uzbekName": "Бақара",
+      "ayahCount": 286,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 114,
+      "name": "ٱلنَّاس",
+      "englishName": "An-Nas",
+      "uzbekName": "Нас",
+      "ayahCount": 6,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    }
+  ]
+}
