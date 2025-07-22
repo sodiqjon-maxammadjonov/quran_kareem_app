@@ -6,8 +6,10 @@ import 'package:quran_kareem/presentation/widgets/ayah_card_widget.dart';
 import 'package:quran_kareem/presentation/widgets/ayah_list_loading_shimmer.dart';
 import 'package:quran_kareem/core/constants/app_colors.dart';
 import 'package:quran_kareem/presentation/widgets/bottom_player_bar.dart';
+// Yaratilgan xatolik vidjetimizni import qilamiz
+import 'package:quran_kareem/presentation/widgets/error_display_widget.dart';
 
-import '../providers/surah_provider.dart'; // Pleyer paneli importi
+import '../providers/surah_provider.dart';
 
 class AyahsScreen extends ConsumerWidget {
   final SurahEntity surah;
@@ -16,12 +18,12 @@ class AyahsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // Sura raqami orqali oyatlarni so'rovchi provayderni kuzatish
     final ayahsAsyncValue = ref.watch(ayahsProvider(surah.number));
     final theme = Theme.of(context);
 
     return Scaffold(
       extendBodyBehindAppBar: true,
-
       body: Stack(
         children: [
           Container(
@@ -38,55 +40,36 @@ class AyahsScreen extends ConsumerWidget {
             ),
           ),
 
-          // 2-qatlam: Asosiy kontent (AppBar va Oyatlar ro'yxati)
-          // SafeArea status bar va boshqa to'siqlardan saqlaydi
           SafeArea(
             child: Column(
               children: [
                 // AppBar
                 AppBar(
                   title: Text(surah.uzbekName),
-                  backgroundColor: Colors.transparent, // fon ustida shaffof
+                  backgroundColor: Colors.transparent,
                   elevation: 0,
                   scrolledUnderElevation: 0,
                 ),
-                // Oyatlar ro'yxatini egallaydigan qism
                 Expanded(
                   child: ayahsAsyncValue.when(
                     loading: () => const AyahListLoadingShimmer(),
-                    error: (err, stack) => Center(
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Ma'lumotlarni yuklashda xatolik yuz berdi.\nIltimos, internet aloqasini tekshiring va qayta urinib ko'ring.",
-                              textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.bodyLarge,
-                            ),
-                            const SizedBox(height: 20),
-                            ElevatedButton.icon(
-                              onPressed: () {
-                                // Xatolikni tozalab, provayderni qayta chaqirish
-                                ref.invalidate(ayahsProvider(surah.number));
-                              },
-                              icon: const Icon(Icons.refresh),
-                              label: const Text("Qayta urinish"),
-                            ),
-                          ],
-                        ),
-                      ),
+
+                    // YANGILANGAN ERROR BLOKI: Endi maxsus vidjetimizni ishlatamiz
+                    error: (error, stackTrace) => ErrorDisplayWidget(
+                      // Bizning `NetworkException` klasslarimizdan keladigan tushunarli matn
+                      errorMessage: error.toString(),
+                      onRetry: () {
+                        // Provayder holatini tozalab, qayta ma'lumot yuklashni boshlaymiz
+                        ref.invalidate(ayahsProvider(surah.number));
+                      },
                     ),
+
                     data: (ayahs) {
                       return ListView.builder(
-                        // Endi padding faqat gorizontal, chunki AppBar
-                        // va BottomPlayerBar o'z joyiga ega.
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        padding: const EdgeInsets.fromLTRB(16, 0, 16, 90),
                         itemCount: ayahs.length,
                         itemBuilder: (context, index) {
-                          final ayah = ayahs[index];
-                          return AyahCardWidget(ayah: ayah);
+                          return AyahCardWidget(ayah: ayahs[index]);
                         },
                       );
                     },
@@ -96,7 +79,6 @@ class AyahsScreen extends ConsumerWidget {
             ),
           ),
 
-          // 3-qatlam: Ekran pastida joylashgan pleyer paneli
           const Positioned(
             bottom: 0,
             left: 0,

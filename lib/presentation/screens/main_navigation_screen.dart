@@ -1,4 +1,6 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:quran_kareem/presentation/screens/asma_ul_husna_screen.dart';
 import 'package:quran_kareem/presentation/screens/prayer_times_screen.dart';
 import 'package:quran_kareem/presentation/screens/qibla_screen.dart';
@@ -6,14 +8,16 @@ import 'package:quran_kareem/presentation/screens/settings_screen.dart';
 import 'package:quran_kareem/presentation/screens/surahs_list_screen.dart';
 import 'package:quran_kareem/core/constants/app_colors.dart';
 
-class MainNavigationScreen extends StatefulWidget {
+import '../providers/connectivity_provider.dart';
+
+class MainNavigationScreen extends ConsumerStatefulWidget {
   const MainNavigationScreen({super.key});
 
   @override
-  State<MainNavigationScreen> createState() => _MainNavigationScreenState();
+  ConsumerState<MainNavigationScreen> createState() => _MainNavigationScreenState();
 }
 
-class _MainNavigationScreenState extends State<MainNavigationScreen> {
+class _MainNavigationScreenState extends ConsumerState<MainNavigationScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = const [
@@ -34,6 +38,18 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
 
   @override
   Widget build(BuildContext context) {
+    ref.listen<AsyncValue<ConnectivityResult>>(connectivityStreamProvider, (_, next) {
+      next.whenData((result) {
+        if (result == ConnectivityResult.none) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text("Internet aloqasi uzildi"),
+              backgroundColor: Colors.red,
+            ),
+          );
+        }
+      });
+    });
     return Scaffold(
       appBar: AppBar(
         title: Text(_widgetTitles.elementAt(_selectedIndex)),
