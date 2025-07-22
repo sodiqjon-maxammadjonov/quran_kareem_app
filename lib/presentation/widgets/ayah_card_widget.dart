@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:quran_kareem/domain/entities/ayah_entity.dart';
 import '../../core/constants/app_text_stylrs.dart';
+import '../../core/services/audio_player_service.dart';
 import '../providers/audio_player_provider.dart';
 
 class AyahCardWidget extends ConsumerWidget {
@@ -10,12 +11,24 @@ class AyahCardWidget extends ConsumerWidget {
   const AyahCardWidget({super.key, required this.ayah});
 
   @override
-  Widget build(BuildContext context,WidgetRef ref) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final colors = Theme.of(context).colorScheme;
+    final currentAyah = ref.watch(currentAyahProvider);
+    final playerStatus = ref.watch(playerStatusProvider);
 
+    final bool isPlaying = (currentAyah?.numberInSurah == ayah.numberInSurah) &&
+        (playerStatus == PlayerStatus.playing);
+    final bool isSelected = (currentAyah?.numberInSurah == ayah.numberInSurah);
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 8),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      color:
+          isSelected ? colors.primary.withValues(alpha: 0.1) : colors.surface,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        side: isSelected
+            ? BorderSide(color: colors.primary, width: 2)
+            : BorderSide.none,
+      ),
       clipBehavior: Clip.antiAlias,
       child: ExpansionTile(
         tilePadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -34,15 +47,14 @@ class AyahCardWidget extends ConsumerWidget {
             Text(
               ayah.text,
               textAlign: TextAlign.right,
-              style: AppTextStyles.amiriAyah.copyWith(
-                  color: colors.onSurface
-              ),
+              style: AppTextStyles.amiriAyah.copyWith(color: colors.onSurface),
             ),
           ],
         ),
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0).copyWith(bottom: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0)
+                .copyWith(bottom: 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -50,7 +62,7 @@ class AyahCardWidget extends ConsumerWidget {
                 Text(
                   ayah.translation ?? "Tarjima mavjud emas",
                   style: AppTextStyles.body.copyWith(
-                    color: colors.onSurface.withOpacity(0.8),
+                    color: colors.onSurface.withValues(alpha: 0.8),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -65,13 +77,19 @@ class AyahCardWidget extends ConsumerWidget {
                     const SizedBox(width: 8),
                     IconButton(
                       onPressed: () {
-                        final audioService = ref.read(audioPlayerServiceProvider);
+                        final audioService =
+                            ref.read(audioPlayerServiceProvider);
                         ref.read(currentAyahProvider.notifier).state = ayah;
                         audioService.play(ayah.audioUrl!);
                       },
-                      icon: const Icon(Icons.play_circle_outline),
-                      iconSize: 32,
+                      icon: Icon(
+                        isPlaying
+                            ? Icons.pause_circle_outline_rounded
+                            : Icons.play_circle_outline,
+                        size: 32,
+                      ),
                       color: colors.primary,
+                      iconSize: 32,
                     ),
                   ],
                 ),

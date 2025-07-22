@@ -1,4 +1,3 @@
-// lib/presentation/screens/ayahs_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:quran_kareem/domain/entities/surah_entity.dart';
@@ -6,9 +5,7 @@ import 'package:quran_kareem/presentation/widgets/ayah_card_widget.dart';
 import 'package:quran_kareem/presentation/widgets/ayah_list_loading_shimmer.dart';
 import 'package:quran_kareem/core/constants/app_colors.dart';
 import 'package:quran_kareem/presentation/widgets/bottom_player_bar.dart';
-// Yaratilgan xatolik vidjetimizni import qilamiz
 import 'package:quran_kareem/presentation/widgets/error_display_widget.dart';
-
 import '../providers/surah_provider.dart';
 
 class AyahsScreen extends ConsumerWidget {
@@ -18,7 +15,6 @@ class AyahsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // Sura raqami orqali oyatlarni so'rovchi provayderni kuzatish
     final ayahsAsyncValue = ref.watch(ayahsProvider(surah.number));
     final theme = Theme.of(context);
 

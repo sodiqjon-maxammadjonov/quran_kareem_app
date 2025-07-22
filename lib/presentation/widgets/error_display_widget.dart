@@ -33,10 +33,12 @@ class ErrorDisplayWidget extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             Text(
-              errorMessage,
-              style: theme.textTheme.bodyMedium?.copyWith(
-                  color: theme.colorScheme.onSurface.withValues(alpha: 0.7)
-              ),
+              (errorMessage.contains("Internet"))
+                  ? "Internet aloqasi topilmadi"
+                  : (errorMessage.contains("Server"))
+                  ? "Server bilan bog'lanishda muammo"
+                  : "Kutilmagan xatolik",
+              style: theme.textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 32),
