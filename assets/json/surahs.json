@@ -19,6 +19,1005 @@
       "revelationPlace": "Мадина"
     },
     {
+      "number": 3,
+      "name": "آلِ عِمْرَان",
+      "englishName": "Ali 'Imran",
+      "uzbekName": "Оли Имрон",
+      "ayahCount": 200,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 4,
+      "name": "ٱلنِّسَاء",
+      "englishName": "An-Nisa",
+      "uzbekName": "Нисо",
+      "ayahCount": 176,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 5,
+      "name": "ٱلْمَائِدَة",
+      "englishName": "Al-Ma'idah",
+      "uzbekName": "Моида",
+      "ayahCount": 120,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 6,
+      "name": "ٱلْأَنْعَام",
+      "englishName": "Al-An'am",
+      "uzbekName": "Анъом",
+      "ayahCount": 165,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 7,
+      "name": "ٱلْأَعْرَاف",
+      "englishName": "Al-A'raf",
+      "uzbekName": "Аъроф",
+      "ayahCount": 206,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 8,
+      "name": "ٱلْأَنْفَال",
+      "englishName": "Al-Anfal",
+      "uzbekName": "Анфол",
+      "ayahCount": 75,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 9,
+      "name": "ٱلتَّوْبَة",
+      "englishName": "At-Tawbah",
+      "uzbekName": "Тавба",
+      "ayahCount": 129,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 10,
+      "name": "يُونُس",
+      "englishName": "Yunus",
+      "uzbekName": "Юнус",
+      "ayahCount": 109,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 11,
+      "name": "هُود",
+      "englishName": "Hud",
+      "uzbekName": "Ҳуд",
+      "ayahCount": 123,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 12,
+      "name": "يُوسُف",
+      "englishName": "Yusuf",
+      "uzbekName": "Юсуф",
+      "ayahCount": 111,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 13,
+      "name": "ٱلرَّعْد",
+      "englishName": "Ar-Ra'd",
+      "uzbekName": "Раъд",
+      "ayahCount": 43,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 14,
+      "name": "إِبْرَاهِيم",
+      "englishName": "Ibrahim",
+      "uzbekName": "Иброҳим",
+      "ayahCount": 52,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 15,
+      "name": "ٱلْحِجْر",
+      "englishName": "Al-Hijr",
+      "uzbekName": "Ҳижр",
+      "ayahCount": 99,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 16,
+      "name": "ٱلنَّحْل",
+      "englishName": "An-Nahl",
+      "uzbekName": "Наҳл",
+      "ayahCount": 128,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 17,
+      "name": "ٱلْإِسْرَاء",
+      "englishName": "Al-Isra",
+      "uzbekName": "Исро",
+      "ayahCount": 111,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 18,
+      "name": "ٱلْكَهْف",
+      "englishName": "Al-Kahf",
+      "uzbekName": "Каҳф",
+      "ayahCount": 110,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 19,
+      "name": "مَرْيَم",
+      "englishName": "Maryam",
+      "uzbekName": "Марям",
+      "ayahCount": 98,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 20,
+      "name": "طه",
+      "englishName": "Taha",
+      "uzbekName": "Тоҳа",
+      "ayahCount": 135,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 21,
+      "name": "ٱلْأَنْبِيَاء",
+      "englishName": "Al-Anbiya",
+      "uzbekName": "Анбиё",
+      "ayahCount": 112,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 22,
+      "name": "ٱلْحَجّ",
+      "englishName": "Al-Hajj",
+      "uzbekName": "Ҳаж",
+      "ayahCount": 78,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 23,
+      "name": "ٱلْمُؤْمِنُون",
+      "englishName": "Al-Mu'minun",
+      "uzbekName": "Мўминун",
+      "ayahCount": 118,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 24,
+      "name": "ٱلنُّور",
+      "englishName": "An-Nur",
+      "uzbekName": "Нур",
+      "ayahCount": 64,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 25,
+      "name": "ٱلْفُرْقَان",
+      "englishName": "Al-Furqan",
+      "uzbekName": "Фурқон",
+      "ayahCount": 77,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 26,
+      "name": "ٱلشُّعَرَاء",
+      "englishName": "Ash-Shu'ara",
+      "uzbekName": "Шуаро",
+      "ayahCount": 227,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 27,
+      "name": "ٱلنَّمْل",
+      "englishName": "An-Naml",
+      "uzbekName": "Намл",
+      "ayahCount": 93,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 28,
+      "name": "ٱلْقَصَص",
+      "englishName": "Al-Qasas",
+      "uzbekName": "Қасас",
+      "ayahCount": 88,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 29,
+      "name": "ٱلْعَنْكَبُوت",
+      "englishName": "Al-Ankabut",
+      "uzbekName": "Анкабут",
+      "ayahCount": 69,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 30,
+      "name": "ٱلرُّوم",
+      "englishName": "Ar-Rum",
+      "uzbekName": "Рум",
+      "ayahCount": 60,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 31,
+      "name": "لُقْمَان",
+      "englishName": "Luqman",
+      "uzbekName": "Луқмон",
+      "ayahCount": 34,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 32,
+      "name": "ٱلسَّجْدَة",
+      "englishName": "As-Sajdah",
+      "uzbekName": "Сажда",
+      "ayahCount": 30,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 33,
+      "name": "ٱلْأَحْزَاب",
+      "englishName": "Al-Ahzab",
+      "uzbekName": "Аҳзоб",
+      "ayahCount": 73,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 34,
+      "name": "سَبَأ",
+      "englishName": "Saba",
+      "uzbekName": "Сабаъ",
+      "ayahCount": 54,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 35,
+      "name": "فَاطِر",
+      "englishName": "Fatir",
+      "uzbekName": "Фотир",
+      "ayahCount": 45,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 36,
+      "name": "يس",
+      "englishName": "Ya-Sin",
+      "uzbekName": "Йа Син",
+      "ayahCount": 83,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 37,
+      "name": "ٱلصَّافَّات",
+      "englishName": "As-Saffat",
+      "uzbekName": "Соффат",
+      "ayahCount": 182,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 38,
+      "name": "ص",
+      "englishName": "Sad",
+      "uzbekName": "Сод",
+      "ayahCount": 88,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 39,
+      "name": "ٱلزُّمَر",
+      "englishName": "Az-Zumar",
+      "uzbekName": "Зумар",
+      "ayahCount": 75,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 40,
+      "name": "غَافِر",
+      "englishName": "Ghafir",
+      "uzbekName": "Ғофир",
+      "ayahCount": 85,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 41,
+      "name": "فُصِّلَت",
+      "englishName": "Fussilat",
+      "uzbekName": "Фуссилат",
+      "ayahCount": 54,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 42,
+      "name": "ٱلشُّورَىٰ",
+      "englishName": "Ash-Shuraa",
+      "uzbekName": "Шўро",
+      "ayahCount": 53,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 43,
+      "name": "ٱلزُّخْرُف",
+      "englishName": "Az-Zukhruf",
+      "uzbekName": "Зухруф",
+      "ayahCount": 89,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 44,
+      "name": "ٱلدُّخَان",
+      "englishName": "Ad-Dukhan",
+      "uzbekName": "Духон",
+      "ayahCount": 59,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 45,
+      "name": "ٱلْجَاثِيَة",
+      "englishName": "Al-Jathiyah",
+      "uzbekName": "Жосия",
+      "ayahCount": 37,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 46,
+      "name": "ٱلْأَحْقَاف",
+      "englishName": "Al-Ahqaf",
+      "uzbekName": "Аҳқоф",
+      "ayahCount": 35,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 47,
+      "name": "مُحَمَّد",
+      "englishName": "Muhammad",
+      "uzbekName": "Муҳаммад",
+      "ayahCount": 38,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 48,
+      "name": "ٱلْفَتْح",
+      "englishName": "Al-Fath",
+      "uzbekName": "Фатҳ",
+      "ayahCount": 29,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 49,
+      "name": "ٱلْحُجُرَات",
+      "englishName": "Al-Hujurat",
+      "uzbekName": "Ҳужурот",
+      "ayahCount": 18,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 50,
+      "name": "ق",
+      "englishName": "Qaf",
+      "uzbekName": "Қоф",
+      "ayahCount": 45,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 51,
+      "name": "ٱلذَّارِيَات",
+      "englishName": "Adh-Dhariyat",
+      "uzbekName": "Зориёт",
+      "ayahCount": 60,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 52,
+      "name": "ٱلطُّور",
+      "englishName": "At-Tur",
+      "uzbekName": "Тур",
+      "ayahCount": 49,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 53,
+      "name": "ٱلنَّجْم",
+      "englishName": "An-Najm",
+      "uzbekName": "Нажм",
+      "ayahCount": 62,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 54,
+      "name": "ٱلْقَمَر",
+      "englishName": "Al-Qamar",
+      "uzbekName": "Қамар",
+      "ayahCount": 55,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 55,
+      "name": "ٱلرَّحْمَٰن",
+      "englishName": "Ar-Rahman",
+      "uzbekName": "Раҳмон",
+      "ayahCount": 78,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 56,
+      "name": "ٱلْوَاقِعَة",
+      "englishName": "Al-Waqi'ah",
+      "uzbekName": "Воқеа",
+      "ayahCount": 96,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 57,
+      "name": "ٱلْحَدِيد",
+      "englishName": "Al-Hadid",
+      "uzbekName": "Ҳадид",
+      "ayahCount": 29,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 58,
+      "name": "ٱلْمُجَادِلَة",
+      "englishName": "Al-Mujadila",
+      "uzbekName": "Мужодала",
+      "ayahCount": 22,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 59,
+      "name": "ٱلْحَشْر",
+      "englishName": "Al-Hashr",
+      "uzbekName": "Ҳашр",
+      "ayahCount": 24,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 60,
+      "name": "ٱلْمُمْتَحَنَة",
+      "englishName": "Al-Mumtahanah",
+      "uzbekName": "Мумтаҳана",
+      "ayahCount": 13,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 61,
+      "name": "ٱلصَّفّ",
+      "englishName": "As-Saf",
+      "uzbekName": "Саф",
+      "ayahCount": 14,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 62,
+      "name": "ٱلْجُمُعَة",
+      "englishName": "Al-Jumu'ah",
+      "uzbekName": "Жума",
+      "ayahCount": 11,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 63,
+      "name": "ٱلْمُنَافِقُون",
+      "englishName": "Al-Munafiqun",
+      "uzbekName": "Мунофиқун",
+      "ayahCount": 11,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 64,
+      "name": "ٱلتَّغَابُن",
+      "englishName": "At-Taghabun",
+      "uzbekName": "Тағобун",
+      "ayahCount": 18,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 65,
+      "name": "ٱلطَّلَاق",
+      "englishName": "At-Talaq",
+      "uzbekName": "Талоқ",
+      "ayahCount": 12,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 66,
+      "name": "ٱلتَّحْرِيم",
+      "englishName": "At-Tahrim",
+      "uzbekName": "Таҳрим",
+      "ayahCount": 12,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 67,
+      "name": "ٱلْمُلْك",
+      "englishName": "Al-Mulk",
+      "uzbekName": "Мулк",
+      "ayahCount": 30,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 68,
+      "name": "ٱلْقَلَم",
+      "englishName": "Al-Qalam",
+      "uzbekName": "Қалам",
+      "ayahCount": 52,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 69,
+      "name": "ٱلْحَاقَّة",
+      "englishName": "Al-Haqqah",
+      "uzbekName": "Ҳаққа",
+      "ayahCount": 52,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 70,
+      "name": "ٱلْمَعَارِج",
+      "englishName": "Al-Ma'arij",
+      "uzbekName": "Маориж",
+      "ayahCount": 44,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 71,
+      "name": "نُوح",
+      "englishName": "Nuh",
+      "uzbekName": "Нуҳ",
+      "ayahCount": 28,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 72,
+      "name": "ٱلْجِنّ",
+      "englishName": "Al-Jinn",
+      "uzbekName": "Жин",
+      "ayahCount": 28,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 73,
+      "name": "ٱلْمُزَّمِّل",
+      "englishName": "Al-Muzzammil",
+      "uzbekName": "Муззаммил",
+      "ayahCount": 20,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 74,
+      "name": "ٱلْمُدَّثِّر",
+      "englishName": "Al-Muddaththir",
+      "uzbekName": "Муддассир",
+      "ayahCount": 56,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 75,
+      "name": "ٱلْقِيَامَة",
+      "englishName": "Al-Qiyamah",
+      "uzbekName": "Қиёмат",
+      "ayahCount": 40,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 76,
+      "name": "ٱلْإِنْسَان",
+      "englishName": "Al-Insan",
+      "uzbekName": "Инсон",
+      "ayahCount": 31,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 77,
+      "name": "ٱلْمُرْسَلَات",
+      "englishName": "Al-Mursalat",
+      "uzbekName": "Мурсалот",
+      "ayahCount": 50,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 78,
+      "name": "ٱلنَّبَأ",
+      "englishName": "An-Naba",
+      "uzbekName": "Набаъ",
+      "ayahCount": 40,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 79,
+      "name": "ٱلنَّازِعَات",
+      "englishName": "An-Nazi'at",
+      "uzbekName": "Назиат",
+      "ayahCount": 46,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 80,
+      "name": "عَبَسَ",
+      "englishName": "Abasa",
+      "uzbekName": "Абаса",
+      "ayahCount": 42,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 81,
+      "name": "ٱلتَّكْوِير",
+      "englishName": "At-Takwir",
+      "uzbekName": "Таквир",
+      "ayahCount": 29,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 82,
+      "name": "ٱلْإِنْفِطَار",
+      "englishName": "Al-Infitar",
+      "uzbekName": "Инфитор",
+      "ayahCount": 19,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 83,
+      "name": "ٱلْمُطَفِّفِين",
+      "englishName": "Al-Mutaffifin",
+      "uzbekName": "Мутаффифун",
+      "ayahCount": 36,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 84,
+      "name": "ٱلِانْشِقَاق",
+      "englishName": "Al-Inshiqaq",
+      "uzbekName": "Иншиқоқ",
+      "ayahCount": 25,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 85,
+      "name": "ٱلْبُرُوج",
+      "englishName": "Al-Buruj",
+      "uzbekName": "Буруж",
+      "ayahCount": 22,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 86,
+      "name": "ٱلطَّارِق",
+      "englishName": "At-Tariq",
+      "uzbekName": "Ториқ",
+      "ayahCount": 17,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 87,
+      "name": "ٱلْأَعْلَىٰ",
+      "englishName": "Al-A'la",
+      "uzbekName": "Аъло",
+      "ayahCount": 19,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 88,
+      "name": "ٱلْغَاشِيَة",
+      "englishName": "Al-Ghashiyah",
+      "uzbekName": "Ғошия",
+      "ayahCount": 26,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 89,
+      "name": "ٱلْفَجْر",
+      "englishName": "Al-Fajr",
+      "uzbekName": "Фажр",
+      "ayahCount": 30,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 90,
+      "name": "ٱلْبَلَد",
+      "englishName": "Al-Balad",
+      "uzbekName": "Балад",
+      "ayahCount": 20,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 91,
+      "name": "ٱلشَّمْس",
+      "englishName": "Ash-Shams",
+      "uzbekName": "Шамс",
+      "ayahCount": 15,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 92,
+      "name": "ٱللَّيْل",
+      "englishName": "Al-Layl",
+      "uzbekName": "Лайл",
+      "ayahCount": 21,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 93,
+      "name": "ٱلضُّحَىٰ",
+      "englishName": "Ad-Duhaa",
+      "uzbekName": "Зуҳо",
+      "ayahCount": 11,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 94,
+      "name": "ٱلشَّرْح",
+      "englishName": "Ash-Sharh",
+      "uzbekName": "Шарҳ",
+      "ayahCount": 8,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 95,
+      "name": "ٱلتِّين",
+      "englishName": "At-Tin",
+      "uzbekName": "Тийн",
+      "ayahCount": 8,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 96,
+      "name": "ٱلْعَلَق",
+      "englishName": "Al-Alaq",
+      "uzbekName": "Алақ",
+      "ayahCount": 19,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 97,
+      "name": "ٱلْقَدْر",
+      "englishName": "Al-Qadr",
+      "uzbekName": "Қадр",
+      "ayahCount": 5,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 98,
+      "name": "ٱلْبَيِّنَة",
+      "englishName": "Al-Bayyinah",
+      "uzbekName": "Баййина",
+      "ayahCount": 8,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 99,
+      "name": "ٱلزَّلْزَلَة",
+      "englishName": "Az-Zalzalah",
+      "uzbekName": "Залзала",
+      "ayahCount": 8,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 100,
+      "name": "ٱلْعَادِيَات",
+      "englishName": "Al-Adiyat",
+      "uzbekName": "Адият",
+      "ayahCount": 11,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 101,
+      "name": "ٱلْقَارِعَة",
+      "englishName": "Al-Qari'ah",
+      "uzbekName": "Қориа",
+      "ayahCount": 11,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 102,
+      "name": "ٱلتَّكَاثُر",
+      "englishName": "At-Takathur",
+      "uzbekName": "Такосур",
+      "ayahCount": 8,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 103,
+      "name": "ٱلْعَصْر",
+      "englishName": "Al-Asr",
+      "uzbekName": "Аср",
+      "ayahCount": 3,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 104,
+      "name": "ٱلْهُمَزَة",
+      "englishName": "Al-Humazah",
+      "uzbekName": "Ҳумаза",
+      "ayahCount": 9,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 105,
+      "name": "ٱلْفِيل",
+      "englishName": "Al-Fil",
+      "uzbekName": "Фил",
+      "ayahCount": 5,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 106,
+      "name": "قُرَيْش",
+      "englishName": "Quraysh",
+      "uzbekName": "Қурайш",
+      "ayahCount": 4,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 107,
+      "name": "ٱلْمَاعُون",
+      "englishName": "Al-Ma'un",
+      "uzbekName": "Моъун",
+      "ayahCount": 7,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 108,
+      "name": "ٱلْكَوْثَر",
+      "englishName": "Al-Kawthar",
+      "uzbekName": "Кавсар",
+      "ayahCount": 3,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 109,
+      "name": "ٱلْكَافِرُون",
+      "englishName": "Al-Kafirun",
+      "uzbekName": "Кофирун",
+      "ayahCount": 6,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 110,
+      "name": "ٱلنَّصْر",
+      "englishName": "An-Nasr",
+      "uzbekName": "Наср",
+      "ayahCount": 3,
+      "revelationType": "Medinan",
+      "revelationPlace": "Мадина"
+    },
+    {
+      "number": 111,
+      "name": "ٱلْمَسَد",
+      "englishName": "Al-Masad",
+      "uzbekName": "Масад",
+      "ayahCount": 5,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 112,
+      "name": "ٱلْإِخْلَاص",
+      "englishName": "Al-Ikhlas",
+      "uzbekName": "Ихлос",
+      "ayahCount": 4,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
+      "number": 113,
+      "name": "ٱلْفَلَق",
+      "englishName": "Al-Falaq",
+      "uzbekName": "Фалақ",
+      "ayahCount": 5,
+      "revelationType": "Meccan",
+      "revelationPlace": "Макка"
+    },
+    {
       "number": 114,
       "name": "ٱلنَّاس",
       "englishName": "An-Nas",
