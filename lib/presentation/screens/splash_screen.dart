@@ -54,15 +54,6 @@ class _SplashScreenState extends State<SplashScreen> {
               width: 250,
               height: 250,
             ),
-            const SizedBox(height: 24),
-            Text(
-              "بِسْمِ ٱللّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
-              textAlign: TextAlign.center,
-              style: AppTextStyles.amiriTitle.copyWith(
-                color: AppColors.primary,
-                fontSize: 32,
-              ),
-            ),
           ],
         ),
       ),
