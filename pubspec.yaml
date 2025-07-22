@@ -50,13 +50,13 @@ flutter:
 
   generate: true
 
-  assets:
+assets:
     - assets/images/
     - assets/json/
     - assets/fonts/
     - assets/animations/
 
-  fonts:
+fonts:
     - family: Amiri
       fonts:
         - asset: assets/fonts/Amiri-Regular.ttf
