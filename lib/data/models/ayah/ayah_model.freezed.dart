@@ -138,7 +138,8 @@ class __$$EditionAyahsModelImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(disallowUnrecognizedKeys: false)
 class _$EditionAyahsModelImpl implements _EditionAyahsModel {
   const _$EditionAyahsModelImpl(
       {required this.number,
@@ -361,7 +362,8 @@ class __$$AyahModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.none)
+@JsonSerializable(
+    disallowUnrecognizedKeys: false, fieldRename: FieldRename.none)
 class _$AyahModelImpl implements _AyahModel {
   const _$AyahModelImpl(
       {required this.numberInSurah,

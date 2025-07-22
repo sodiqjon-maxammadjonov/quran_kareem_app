@@ -23,12 +23,10 @@ class SurahCardWidget extends StatelessWidget {
         );
       },
       child: Card(
-        // Card'ning o'z rangini ishlatadi
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Row(
             children: [
-              // Sura raqamini ko'rsatuvchi bezakli belgi
               Stack(
                 alignment: Alignment.center,
                 children: [
@@ -48,7 +46,6 @@ class SurahCardWidget extends StatelessWidget {
                 ],
               ),
               const SizedBox(width: 16),
-              // Sura nomlari va ma'lumotlari
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
