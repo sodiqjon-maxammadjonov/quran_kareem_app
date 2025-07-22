@@ -1,24 +1,32 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:quran_kareem/core/themes/app_theme.dart';
+import 'package:quran_kareem/presentation/screens/splash_screen.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(
+    const ProviderScope(
+      child: QuranApp(),
+    ),
+  );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class QuranApp extends StatelessWidget {
+  const QuranApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Quran Kareem',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
-      home: const Scaffold(
-        body: Center(
-          child: Text('Qur\'an Kareem App'),
-        ),
-      ),
+      title: 'Qur\'on Kareem',
+      debugShowCheckedModeBanner: false,
+
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.light,
+
+      home: const SplashScreen(),
     );
   }
 }
