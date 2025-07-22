@@ -14,6 +14,222 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
+EditionAyahsModel _$EditionAyahsModelFromJson(Map<String, dynamic> json) {
+  return _EditionAyahsModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$EditionAyahsModel {
+  int get number => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get englishName => throw _privateConstructorUsedError;
+  List<AyahModel> get ayahs => throw _privateConstructorUsedError;
+
+  /// Serializes this EditionAyahsModel to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of EditionAyahsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $EditionAyahsModelCopyWith<EditionAyahsModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EditionAyahsModelCopyWith<$Res> {
+  factory $EditionAyahsModelCopyWith(
+          EditionAyahsModel value, $Res Function(EditionAyahsModel) then) =
+      _$EditionAyahsModelCopyWithImpl<$Res, EditionAyahsModel>;
+  @useResult
+  $Res call(
+      {int number, String name, String englishName, List<AyahModel> ayahs});
+}
+
+/// @nodoc
+class _$EditionAyahsModelCopyWithImpl<$Res, $Val extends EditionAyahsModel>
+    implements $EditionAyahsModelCopyWith<$Res> {
+  _$EditionAyahsModelCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of EditionAyahsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? number = null,
+    Object? name = null,
+    Object? englishName = null,
+    Object? ayahs = null,
+  }) {
+    return _then(_value.copyWith(
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      englishName: null == englishName
+          ? _value.englishName
+          : englishName // ignore: cast_nullable_to_non_nullable
+              as String,
+      ayahs: null == ayahs
+          ? _value.ayahs
+          : ayahs // ignore: cast_nullable_to_non_nullable
+              as List<AyahModel>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$EditionAyahsModelImplCopyWith<$Res>
+    implements $EditionAyahsModelCopyWith<$Res> {
+  factory _$$EditionAyahsModelImplCopyWith(_$EditionAyahsModelImpl value,
+          $Res Function(_$EditionAyahsModelImpl) then) =
+      __$$EditionAyahsModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int number, String name, String englishName, List<AyahModel> ayahs});
+}
+
+/// @nodoc
+class __$$EditionAyahsModelImplCopyWithImpl<$Res>
+    extends _$EditionAyahsModelCopyWithImpl<$Res, _$EditionAyahsModelImpl>
+    implements _$$EditionAyahsModelImplCopyWith<$Res> {
+  __$$EditionAyahsModelImplCopyWithImpl(_$EditionAyahsModelImpl _value,
+      $Res Function(_$EditionAyahsModelImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of EditionAyahsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? number = null,
+    Object? name = null,
+    Object? englishName = null,
+    Object? ayahs = null,
+  }) {
+    return _then(_$EditionAyahsModelImpl(
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      englishName: null == englishName
+          ? _value.englishName
+          : englishName // ignore: cast_nullable_to_non_nullable
+              as String,
+      ayahs: null == ayahs
+          ? _value._ayahs
+          : ayahs // ignore: cast_nullable_to_non_nullable
+              as List<AyahModel>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$EditionAyahsModelImpl implements _EditionAyahsModel {
+  const _$EditionAyahsModelImpl(
+      {required this.number,
+      required this.name,
+      required this.englishName,
+      required final List<AyahModel> ayahs})
+      : _ayahs = ayahs;
+
+  factory _$EditionAyahsModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EditionAyahsModelImplFromJson(json);
+
+  @override
+  final int number;
+  @override
+  final String name;
+  @override
+  final String englishName;
+  final List<AyahModel> _ayahs;
+  @override
+  List<AyahModel> get ayahs {
+    if (_ayahs is EqualUnmodifiableListView) return _ayahs;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_ayahs);
+  }
+
+  @override
+  String toString() {
+    return 'EditionAyahsModel(number: $number, name: $name, englishName: $englishName, ayahs: $ayahs)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditionAyahsModelImpl &&
+            (identical(other.number, number) || other.number == number) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.englishName, englishName) ||
+                other.englishName == englishName) &&
+            const DeepCollectionEquality().equals(other._ayahs, _ayahs));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, number, name, englishName,
+      const DeepCollectionEquality().hash(_ayahs));
+
+  /// Create a copy of EditionAyahsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditionAyahsModelImplCopyWith<_$EditionAyahsModelImpl> get copyWith =>
+      __$$EditionAyahsModelImplCopyWithImpl<_$EditionAyahsModelImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$EditionAyahsModelImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _EditionAyahsModel implements EditionAyahsModel {
+  const factory _EditionAyahsModel(
+      {required final int number,
+      required final String name,
+      required final String englishName,
+      required final List<AyahModel> ayahs}) = _$EditionAyahsModelImpl;
+
+  factory _EditionAyahsModel.fromJson(Map<String, dynamic> json) =
+      _$EditionAyahsModelImpl.fromJson;
+
+  @override
+  int get number;
+  @override
+  String get name;
+  @override
+  String get englishName;
+  @override
+  List<AyahModel> get ayahs;
+
+  /// Create a copy of EditionAyahsModel
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$EditionAyahsModelImplCopyWith<_$EditionAyahsModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 AyahModel _$AyahModelFromJson(Map<String, dynamic> json) {
   return _AyahModel.fromJson(json);
 }

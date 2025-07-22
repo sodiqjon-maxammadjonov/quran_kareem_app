@@ -26,7 +26,6 @@ class SurahModel with _$SurahModel implements SurahEntity {
     required String revelationPlace,
   }) = _SurahModel;
 
-
   factory SurahModel.fromJson(Map<String, dynamic> json) =>
       _$SurahModelFromJson(json);
 }
