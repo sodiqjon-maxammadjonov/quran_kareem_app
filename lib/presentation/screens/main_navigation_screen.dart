@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quran_kareem/presentation/screens/asma_ul_husna_screen.dart';
 import 'package:quran_kareem/presentation/screens/prayer_times_screen.dart';
 import 'package:quran_kareem/presentation/screens/qibla_screen.dart';
+import 'package:quran_kareem/presentation/screens/settings_screen.dart';
 import 'package:quran_kareem/presentation/screens/surahs_list_screen.dart';
 import 'package:quran_kareem/core/constants/app_colors.dart';
 
@@ -39,7 +40,14 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.settings_outlined)),
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SettingsScreen()));
+              },
+              icon: const Icon(Icons.settings_outlined)),
         ],
       ),
       extendBodyBehindAppBar: true,
@@ -60,10 +68,22 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.menu_book_outlined), activeIcon: Icon(Icons.menu_book_rounded), label: 'Suralar'),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite_border_outlined), activeIcon: Icon(Icons.favorite_rounded), label: '99 Ism'),
-          BottomNavigationBarItem(icon: Icon(Icons.watch_later_outlined), activeIcon: Icon(Icons.watch_later), label: 'Vaqtlar'),
-          BottomNavigationBarItem(icon: Icon(Icons.explore_outlined), activeIcon: Icon(Icons.explore), label: 'Qibla'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.menu_book_outlined),
+              activeIcon: Icon(Icons.menu_book_rounded),
+              label: 'Suralar'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.favorite_border_outlined),
+              activeIcon: Icon(Icons.favorite_rounded),
+              label: '99 Ism'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.watch_later_outlined),
+              activeIcon: Icon(Icons.watch_later),
+              label: 'Vaqtlar'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.explore_outlined),
+              activeIcon: Icon(Icons.explore),
+              label: 'Qibla'),
         ],
         currentIndex: _selectedIndex,
         onTap: (index) {
