@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:quran_kareem/domain/entities/surah_entity.dart';
 import '../../core/constants/app_text_stylrs.dart';
+import '../screens/ayahs_screen.dart';
 
 class SurahCardWidget extends StatelessWidget {
   final SurahEntity surah;
@@ -14,7 +15,12 @@ class SurahCardWidget extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
-        print("${surah.uzbekName} surasi bosildi");
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => AyahsScreen(surah: surah),
+          ),
+        );
       },
       child: Card(
         // Card'ning o'z rangini ishlatadi
